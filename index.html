@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tutorial básico sobre HTML, CSS y JavaScript aplicado a un sistema de control de acceso para gimnasio.">
+  <title>Tutorial web | Control de acceso al gimnasio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero" id="inicio">
+    <nav class="nav">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio"><span class="brand-mark">PF</span> PowerFit <span class="brand-light">| Tutorial web</span></a>
+      <a class="nav-link" href="#temas">Ver tutorial <span aria-hidden="true">↓</span></a>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">GUÍA PARA PRINCIPIANTES</p>
+      <h1>Cómo funciona una página web para el <span>control de acceso</span></h1>
+      <p class="hero-text">Un recorrido sencillo por HTML, CSS y JavaScript, usando como ejemplo un sistema que verifica si la membresía de un usuario está activa.</p>
+      <a class="button" href="#temas">Comenzar tutorial <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="art-card">
+        <div class="art-top"><span></span><span></span><span></span><small>POWERFIT / ACCESO</small></div>
+        <div class="art-user"><div class="avatar">ER</div><div><b>Elian Rivera</b><small>Documento: 123456789</small></div></div>
+        <div class="status"><span class="status-dot"></span><div><b>Membresía activa</b><small>Acceso permitido</small></div><span class="check">✓</span></div>
+        <div class="art-lines"><i></i><i></i><i></i></div>
+      </div>
+      <div class="floating-tag">✓ Consulta rápida</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="eyebrow">ANTES DE EMPEZAR</p>
+      <h2>¿Qué vamos a aprender?</h2>
+      <p>Una página web combina varias tecnologías. Cada una cumple una función y juntas permiten mostrar información y responder a las acciones del usuario.</p>
+    </section>
+
+    <section class="topics" id="temas">
+      <article class="topic-card">
+        <div class="topic-image html-image" role="img" aria-label="Ilustración de etiquetas HTML">
+          <svg viewBox="0 0 260 150" aria-hidden="true"><path d="M76 28H184L174 119L130 132L86 119Z" fill="#f97316" opacity=".16"/><path d="M91 42H169L162 108L130 118L98 108Z" fill="#f97316"/><path d="M113 62L98 75L113 88M147 62L162 75L147 88M139 56L123 95" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="topic-body"><span class="topic-number">01 / ESTRUCTURA</span><h3>HTML: la estructura</h3><p>HTML organiza el contenido de la página. Con sus etiquetas podemos crear títulos, párrafos, enlaces, listas e imágenes. Por ejemplo, el nombre del usuario y su estado de membresía se pueden mostrar con HTML.</p><code>&lt;h1&gt;Control de acceso&lt;/h1&gt;</code></div>
+      </article>
+
+      <article class="topic-card">
+        <div class="topic-image css-image" role="img" aria-label="Ilustración de una paleta de colores y estilos CSS">
+          <svg viewBox="0 0 260 150" aria-hidden="true"><rect x="62" y="27" width="136" height="96" rx="15" fill="#8b5cf6" opacity=".16"/><rect x="77" y="42" width="106" height="66" rx="10" fill="#fff" stroke="#8b5cf6" stroke-width="3"/><circle cx="98" cy="62" r="8" fill="#8b5cf6"/><circle cx="122" cy="62" r="8" fill="#f97316"/><circle cx="146" cy="62" r="8" fill="#22c55e"/><path d="M94 84H166M94 95H145" stroke="#8b5cf6" stroke-width="5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="topic-body"><span class="topic-number">02 / PRESENTACIÓN</span><h3>CSS: los estilos</h3><p>CSS define cómo se ve la página: colores, tamaños, espacios y distribución de los elementos. Sirve para que la información sea clara y para que el sitio también se vea bien en celulares.</p><code>color: #22c55e;</code></div>
+      </article>
+
+      <article class="topic-card">
+        <div class="topic-image js-image" role="img" aria-label="Ilustración de código JavaScript">
+          <svg viewBox="0 0 260 150" aria-hidden="true"><rect x="62" y="24" width="136" height="102" rx="12" fill="#facc15" opacity=".2"/><rect x="75" y="36" width="110" height="78" rx="8" fill="#20242e"/><path d="M93 57L108 69L93 81M120 83H158" fill="none" stroke="#facc15" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><text x="130" y="103" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">JS</text></svg>
+        </div>
+        <div class="topic-body"><span class="topic-number">03 / INTERACCIÓN</span><h3>JavaScript: la lógica</h3><p>JavaScript permite que la página reaccione a lo que hace el usuario. En este ejemplo, al escribir un documento se puede consultar el estado de la membresía y mostrar si el acceso está permitido o no.</p><code>button.addEventListener(...)</code></div>
+      </article>
+    </section>
+
+    <section class="demo" aria-labelledby="demo-title">
+      <div>
+        <p class="eyebrow">EJEMPLO PRÁCTICO</p>
+        <h2 id="demo-title">Prueba una consulta de acceso</h2>
+        <p>Escribe un número de documento de ejemplo y revisa el resultado. Usa <b>1234</b> para una membresía activa o <b>5678</b> para una vencida.</p>
+      </div>
+      <form id="access-form" class="demo-form">
+        <label for="documento">Número de documento</label>
+        <div class="input-row"><input id="documento" name="documento" type="text" inputmode="numeric" placeholder="Ej. 1234" required><button type="submit">Consultar</button></div>
+        <p id="result" class="result" aria-live="polite">El resultado aparecerá aquí.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer><span class="brand-mark small">PF</span><p>Actividad de fundamentos front-end · HTML, CSS y JavaScript</p><a href="#inicio">Volver arriba ↑</a></footer>
+</body>
+</html>

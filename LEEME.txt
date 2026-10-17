@@ -1,0 +1,14 @@
+Evidencia GA6-220501096-AA4-EV01
+Tutorial de fundamentos front-end: HTML, CSS y JavaScript.
+
+Archivos:
+- index.html: estructura y contenido de la página.
+- styles.css: colores, distribución y estilos adaptables a celulares.
+- script.js: ejemplo interactivo para consultar el estado de una membresía.
+
+Para verlo:
+1. Extrae la carpeta del ZIP.
+2. Abre index.html en un navegador.
+3. En el ejemplo de consulta, escribe 1234 para una membresía activa o 5678 para una vencida.
+
+Los datos son ejemplos y no están conectados a una base de datos real.
